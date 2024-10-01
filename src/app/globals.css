@@ -23,6 +23,57 @@
 }
 
 @layer components {
+  .bg-yellow-dark {
+    background-color: var(--yellow-dark);
+  }
+  .bg-yellow {
+    background-color: var(--yellow);
+  }
+  .bg-yellow-light {
+    background-color: var(--yellow-light);
+  }
+  .bg-purple-dark {
+    background-color: var(--purple-dark);
+  }
+  .bg-purple {
+    background-color: var(--purple);
+  }
+  .bg-purple-light {
+    background-color: var(--purple-light);
+  }
+  .bg-base-title {
+    background-color: var(--base-title);
+  }
+  .bg-base-subtitle {
+    background-color: var(--base-subtitle);
+  }
+  .bg-base-text {
+    background-color: var(--base-text);
+  }
+  .bg-base-label {
+    background-color: var(--base-label);
+  }
+  .bg-base-hover {
+    background-color: var(--base-hover);
+  }
+  .bg-base-button {
+    background-color: var(--base-button);
+  }
+  .bg-base-input {
+    background-color: var(--base-input);
+  }
+  .bg-base-card {
+    background-color: var(--base-card);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .bg-white {
+    background-color: var(--white);
+  }
+}
+
+@layer components {
   .bg-base-button {
     background-color: var(--base-button);
   }
