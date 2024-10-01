@@ -1,7 +1,11 @@
+import CoffeeIntro from "@/components/CoffeeIntro";
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Coffee</h1>
+    <div className="flex flex-col">
+      <Header />
+      <CoffeeIntro />
     </div>
   );
 }
