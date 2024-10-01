@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Baloo_2 } from "next/font/google";
-import Header from "@/components/Header";
 
 const ballo2 = Baloo_2({
   subsets: ["latin"],
@@ -20,10 +19,9 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body
-        className={`${ballo2.className} container mx-auto w-full bg-background`}
+        className={`${ballo2.className} container mx-auto w-full h-screen bg-background`}
       >
-        <div className="flex flex-col md:max-w-[1440px] mx-auto h-screen">
-          <Header />
+        <div className="flex w-full md:max-w-[1440px] mx-auto h-screen">
           {children}
         </div>
       </body>
