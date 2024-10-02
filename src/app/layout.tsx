@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={`${ballo2.className} container mx-auto w-full h-screen bg-background`}
       >
-        <div className="flex w-full md:max-w-[1440px] mx-auto h-screen">
+        <div className="w-full md:max-w-[1440px] mx-auto h-screen">
           {children}
         </div>
       </body>
