@@ -1,8 +1,8 @@
 export default function ItensInCart() {
   return (
-    <div className=" bg-yellow-dark justify-center items-center text-center rounded-full w-[25px] h-[20px] absolute top-[-8px] left-7 pb-6">
-      <span className="text-xs text-white  items-center leading-tight rounded-full w-[25px] h-[25px]">
-        3
+    <div className=" bg-yellow-dark justify-center items-center text-center rounded-full px-2 py-1   absolute top-[-6px] left-6 sm:top-[-8px] sm:left-6  ">
+      <span className="flex items-center justify-center text-xs text-white  leading-tight ">
+        12
       </span>
     </div>
   );
