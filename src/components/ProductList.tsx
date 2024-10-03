@@ -14,7 +14,7 @@ export interface ProductListType {
 
 const ProductList: React.FC = () => {
   return (
-    <div className="mt-6 mx-2 grid grid-cols-1 gap-2 justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 h-80 max-w-[1240px] w-full ">
+    <div className="mt-6 mx-2 grid grid-cols-1 gap-2 justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 min-h-screen max-w-[1240px] w-full">
       {products.map((product) => (
         <div
           key={product.id}
