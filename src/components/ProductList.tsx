@@ -14,11 +14,11 @@ export interface ProductListType {
 
 const ProductList: React.FC = () => {
   return (
-    <div className="mt-6 mx-2 grid grid-cols-1 gap-2 justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 min-h-screen max-w-[1240px] w-full">
+    <div className="mt-6 mx-2 grid grid-cols-1 gap-2 justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 max-w-[1240px] w-full">
       {products.map((product) => (
         <div
           key={product.id}
-          className=" p-4 rounded-2xl bg-base-card justify-center text-center w-80 md:max-w-[236px] relative mt-6"
+          className=" p-4 rounded-2xl bg-base-card justify-center text-center w-80 md:max-w-[236px] relative mt-6 "
         >
           <div className="absolute  top-[-30px] left-24 sm:top-[-30px] sm:left-14">
             <Image
