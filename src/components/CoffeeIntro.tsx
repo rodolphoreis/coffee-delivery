@@ -8,9 +8,9 @@ const baloo2 = Baloo_2({
 
 export default function CoffeeIntro() {
   return (
-    <div className="flex mt-[104px]  w-full h-auto max-w-[1440px] md:px-auto  md:py-16 gap-4 ">
+    <div className="flex mt-[104px] px-2 w-full h-auto md:py-16 gap-4 ">
       {/* Text Section */}
-      <div className=" flex flex-col px-4 sm:px-1 md:px-6 2xl:mx-16 lg:max-w-[900px]  ">
+      <div className=" flex flex-col lg:max-w-[900px]">
         <div>
           <h1
             className={`${baloo2.className} text-3xl xl:text-5xl xl:max-w-[820px] font-extrabold leading-9`}
