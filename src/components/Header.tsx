@@ -4,8 +4,8 @@ import Cart from "./Cart";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 flex items-center justify-between h-[104px] px-6 md:px-28 lg:px-20 2xl:px-[310px] py-4 z-50  mx-auto bg-white">
-      <div className=" lg:max-w-[1440px] mx-auto flex justify-between w-full ">
+    <header className="fixed top-0 left-0 right-0 flex items-center justify-between h-[104px] px-6   py-4 z-50  mx-auto bg-white">
+      <div className=" max-w-[1240px] mx-auto flex justify-between w-full  md:px-10">
         <div className="w-16 md:w-20 self-center">
           <Link href="/">
             <Image src="/Logo.svg" alt="Logo" width={85} height={40}></Image>
