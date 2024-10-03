@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+html {
   height: 100%;
-  margin: 0;
 }
-
+body {
+  min-height: 100%;
+  margin: 0 auto;
+}
 :root {
   --yellow-dark: #c47f17;
   --yellow: #dbac2c;
