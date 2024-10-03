@@ -18,12 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body
-        className={`${ballo2.className} container  mx-auto  h-screen bg-background`}
-      >
-        <div className=" max-w-[1240px] mx-auto h-screen px:10 md:px-10 bg-background">
+      <body className={`${ballo2.className} container  mx-auto bg-background`}>
+        <main className=" max-w-[1240px] mx-auto min-h-screen h-full px:10 md:px-10">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );
