@@ -19,7 +19,7 @@ const ProductList: React.FC = () => {
       {products.map((product) => (
         <div
           key={product.id}
-          className=" p-4 rounded-2xl bg-base-card justify-center text-center w-80 md:max-w-[236px] relative mt-6 "
+          className=" p-4 rounded-2xl bg-base-card justify-center text-center w-80 md:max-w-[236px] relative mt-9"
         >
           <div className="absolute  top-[-30px] left-24 sm:top-[-30px] sm:left-14">
             <Image
