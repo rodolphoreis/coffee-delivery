@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import { products } from "@/db/products";
+import CartItemCounter from "./CartItemCounter";
 
 export interface ProductListType {
   id: number;
