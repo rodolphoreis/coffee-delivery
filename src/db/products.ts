@@ -96,7 +96,7 @@ export const products: ProductListType[] = [
   {
     id: 12,
     product: "Havaiano",
-    description: "Bebida adocicada preparada com café e leite de coco",
+    description: "Bebida adocicada preparada com café, leite de coco e ervas",
     price: "€ 5,90",
     type: ["especial"],
     image: "/Havaiano.png",
