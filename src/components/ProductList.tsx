@@ -44,7 +44,7 @@ const ProductList: React.FC = () => {
               <h2 className="text-xl font-bold mb-6">{product.product}</h2>
               <p className="text-gray-700">{product.description}</p>
             </div>
-            <div>
+            <div className="flex gap-4 items-center justify-center">
               <p className="text-lg font-semibold">{product.price}</p>
               <div></div>
             </div>
