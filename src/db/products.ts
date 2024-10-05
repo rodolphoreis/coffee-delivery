@@ -90,7 +90,7 @@ export const products: ProductListType[] = [
     description:
       "Drink gelado de café expresso com rum, creme de leite e hortelã",
     price: "€ 5,90",
-    type: ["tradicional", "alcoólico"],
+    type: ["alcoólico"],
     image: "/Cubano.png",
   },
   {
