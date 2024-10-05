@@ -7,7 +7,7 @@ export default function Footer() {
         © 2024 Coffee Delivery - Criado por{" "}
         <Link
           href="https://www.linkedin.com/feed/"
-          className="text-yellow-600 font-bold hover:underline"
+          className="text-zinc-700 font-bold hover:underline"
           target="_blank"
         >
           Rodolpho Reis
