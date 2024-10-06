@@ -47,7 +47,7 @@ const ProductList: React.FC = () => {
             <div className="flex gap-4 items-center justify-center">
               <p className="text-lg font-semibold">{product.price}</p>
               <div className="flex gap-2">
-                <CartItemCounter />
+                <CartItemCounter id={product.id} />
                 <div className="flex w-[33px] h-[33px] md:w-[38px] md:h-[38px] bg-purple rounded-xl relative justify-center self-center">
                   <Image
                     src="/ShoppingCartSimple.svg"
