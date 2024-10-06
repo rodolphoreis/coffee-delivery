@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Baloo_2 } from "next/font/google";
 import { useState } from "react";
 import { CoffeeCard } from "./CoffeeCard";
+import Link from "next/link";
 
 const baloo2 = Baloo_2({
   subsets: ["latin"],
@@ -227,14 +228,14 @@ const Form = () => {
               <h1>Total</h1>
               <p>€ 14,80</p>
             </div>
-            <button
-              type="submit"
-              className={`w-full rounded-[6px] p-4 text-white text-base font-bold mt-6 ${
+            <Link
+              href="/coffeeDeliverySuccess"
+              className={`w-full rounded-[6px] p-4 text-white text-center text-base font-bold mt-6 ${
                 activeButton === "" ? "bg-yellow" : "bg-purple-500"
               }`}
             >
               CONFIRMAR PEDIDO
-            </button>
+            </Link>
           </div>
         </div>
       </div>
