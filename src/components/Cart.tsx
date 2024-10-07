@@ -11,7 +11,7 @@ export default function Cart() {
     throw new Error("ItensInCart deve ser usado dentro de um ItensProvider");
   }
 
-  const { itemQuantities } = context;
+  const { itemQuantities = {} } = context;
 
   const totalItems = Object.values(itemQuantities).reduce(
     (acc, quantity) => acc + quantity,
