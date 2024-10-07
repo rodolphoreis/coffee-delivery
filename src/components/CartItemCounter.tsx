@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ItensContext } from "../../context/ItensContext";
 
 export default function CartItemCounter({ id }: { id: number }) {
-  const { itemQuantities, setItemQuantities } = useContext(ItensContext);
+  const { itemQuantities = {}, setItemQuantities } = useContext(ItensContext);
 
   const handleIncrement = () => {
     setItemQuantities({
