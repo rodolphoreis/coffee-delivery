@@ -43,6 +43,11 @@ export default function ItensContextProvider({
     }
   }, [itemQuantities, totalItems]);
 
+  const removeItem = (id: number) => {
+    const newQuantities = { ...itemQuantities };
+    delete newQuantities[id];
+    setItemQuantities(newQuantities);
+  };
 
   return (
     <ItensContext.Provider
