@@ -26,6 +26,10 @@ export default function ItensContextProvider({
   const [itemQuantities, setItemQuantities] = useState<{
     [key: number]: number;
   }>({});
+  const totalItems = Object.values(itemQuantities || {}).reduce(
+    (acc, quantity) => acc + quantity,
+    0
+  );
 
   return (
     <ItensContext.Provider
