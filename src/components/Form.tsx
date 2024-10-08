@@ -30,7 +30,9 @@ const Inputs = zod.object({
 type Inputs = zod.infer<typeof Inputs>;
 
 const Form = () => {
-  const { register, handleSubmit /* watch */ } = useForm<Inputs>({
+  const { products, itemQuantities } = useContext(ItensContext);
+
+  const { register, handleSubmit } = useForm<Inputs>({
     resolver: zodResolver(Inputs),
   });
   const [activeButton, setActiveButton] = useState("");
