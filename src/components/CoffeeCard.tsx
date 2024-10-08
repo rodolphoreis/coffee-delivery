@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { useContext } from "react";
+import { ItensContext } from "../../context/ItensContext";
 import CartItemCounter from "./CartItemCounter";
 
 interface CoffeeCardProps {
