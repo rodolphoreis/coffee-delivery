@@ -1,7 +1,10 @@
 import Image from "next/image";
 import CartItemCounter from "./CartItemCounter";
 
-export function CoffeeCard() {
+interface CoffeeCardProps {
+  id: number;
+}
+
   return (
     <div className="flex  px-1 py-2 border-b justify-between border-b-zinc-300 pb- md:pb-8 mb-4">
       <div className="flex gap-5">
