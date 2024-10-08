@@ -2,6 +2,8 @@
 import { createContext, ReactNode, useState } from "react";
 import { products } from "@/db/products";
 import { ProductListType } from "@/components/ProductList";
+import { products } from "@/db/products";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 interface ItensContextProviderProps {
   children: ReactNode;
