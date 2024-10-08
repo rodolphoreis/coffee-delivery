@@ -30,6 +30,19 @@ export default function ItensContextProvider({
     (acc, quantity) => acc + quantity,
     0
   );
+  useEffect(() => {
+    const savedItemQuantities = localStorage.getItem("itemQuantities");
+    if (savedItemQuantities) {
+      setItemQuantities(JSON.parse(savedItemQuantities));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (totalItems > 0) {
+      localStorage.setItem("itemQuantities", JSON.stringify(itemQuantities));
+    }
+  }, [itemQuantities, totalItems]);
+
 
   return (
     <ItensContext.Provider
