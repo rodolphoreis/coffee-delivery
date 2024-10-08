@@ -58,6 +58,22 @@ const Form = () => {
     setActiveButton(buttonName);
   };
 
+  const selectedItems =
+    products && itemQuantities
+      ? products.filter((item) => itemQuantities[item.id] > 0)
+      : [];
+
+  const totalPrice = selectedItems.reduce((acc, item) => {
+    const priceValue = parseFloat(
+      item.price.replace("€ ", "").replace(",", ".")
+    );
+    return acc + priceValue * itemQuantities[item.id];
+  }, 0);
+
+  const delivery = 3.0;
+  const ThereAreNoProductsSelected = "0,00";
+  const grandTotal = totalPrice + delivery;
+
   return (
     <main className="mx-2 sm:mx-0 flex flex-col  gap-6 sm:gap-16 xl:flex-row">
       <div>
