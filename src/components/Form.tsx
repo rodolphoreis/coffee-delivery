@@ -5,9 +5,10 @@ import * as zod from "zod";
 import Image from "next/image";
 
 import { Baloo_2 } from "next/font/google";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CoffeeCard } from "./CoffeeCard";
 import Link from "next/link";
+import { ItensContext } from "../../context/ItensContext";
 
 const baloo2 = Baloo_2({
   subsets: ["latin"],
