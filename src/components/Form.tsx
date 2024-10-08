@@ -231,8 +231,9 @@ const Form = () => {
         </h1>
         <div className="flex flex-col flex-1 p-4 sm:mx-0 sm:p-10 rounded-xl bg-base-card  justify-between  xl:min-w-[550px]">
           <div>
-            <CoffeeCard />
-            <CoffeeCard />
+            {selectedItems.map((item) => (
+              <CoffeeCard key={item.id} id={item.id} />
+            ))}
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex justify-between">
