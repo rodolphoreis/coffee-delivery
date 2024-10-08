@@ -238,11 +238,16 @@ const Form = () => {
           <div className="flex flex-col gap-3">
             <div className="flex justify-between">
               <h1>Total de itens</h1>
-              <p>€ 11,80</p>
+
+              <p>{totalPrice.toFixed(2).replace(".", ",")}</p>
             </div>
             <div className="flex justify-between">
               <h1>Entrega</h1>
-              <p>€ 3,00</p>
+              {selectedItems.length > 0 ? (
+                <p>{delivery.toFixed(2).replace(".", ",")}</p>
+              ) : (
+                <p>{ThereAreNoProductsSelected}</p>
+              )}
             </div>
             <div className="flex justify-between font-bold">
               <h1>Total</h1>
