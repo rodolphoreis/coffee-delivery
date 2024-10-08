@@ -10,10 +10,11 @@ interface ItensContextProviderProps {
 }
 
 export interface ContextItens {
-  itens: ProductListType[];
-  setItens: (itens: ProductListType[]) => void;
+  products: ProductListType[];
+  totalItems: number;
   itemQuantities: { [key: number]: number };
   setItemQuantities: (quantities: { [key: number]: number }) => void;
+  removeItem: (id: number) => void;
 }
 
 export const ItensContext = createContext({} as ContextItens);
