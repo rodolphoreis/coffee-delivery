@@ -37,21 +37,6 @@ const Form = () => {
   });
   const [activeButton, setActiveButton] = useState("");
 
-  /*   const watchCodigoPostal = watch("codigoPostal");
-  const watchRua = watch("rua");
-  const watchFreguesia = watch("freguesia");
-  const watchCidade = watch("cidade");
-  const watchNumero = watch("numero");
-  const watchComplemento = watch("complemento");
-*/
-  /*   const isSubmitDisabled =
-    !watchCodigoPostal &&
-    !watchRua &&
-    !watchFreguesia &&
-    !watchCidade &&
-    !watchNumero &&
-    !watchComplemento;
-*/
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   const handleButtonClick = (buttonName: string) => {
