@@ -32,9 +32,15 @@ export default function Header() {
               </span>
             </button>
           </div>
-          <Link href="/checkout" className="cursor-pointer">
-            <Cart />
-          </Link>
+          {totalItems ? (
+            <Link href="/checkout" className="cursor-pointer">
+              <Cart />
+            </Link>
+          ) : (
+            <Link href="/" className="cursor-pointer">
+              <Cart />
+            </Link>
+          )}
         </div>
       </div>
     </header>
