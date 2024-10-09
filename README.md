@@ -35,7 +35,6 @@ Para começar a usar este projeto, siga estas etapas:
 - Formulário: Cadastro de morada para envio do pedido.
 
 ## Imagens do Projeto
-src/img/home.png
 
 ![Tela Inicial](src/img/home.png)  
 _Home_
@@ -48,3 +47,13 @@ _Checkout2_
 
 ![Tela de Success](src/img/success.png)  
 _Success_
+
+##  Tecnologias Utilizadas
+
+- Frontend: Next.js, TypeScript, Tailwind 
+- Hospedagem: Vercel (Frontend)
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você gostaria de contribuir para este projeto, por favor, faça um fork do repositório e envie um pull request com suas alterações.
+
