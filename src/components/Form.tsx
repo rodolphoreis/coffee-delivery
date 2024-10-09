@@ -251,7 +251,11 @@ const Form = () => {
             </div>
             <div className="flex justify-between font-bold">
               <h1>Total</h1>
-              <p>€ 14,80</p>
+              {selectedItems.length > 0 ? (
+                <p>{grandTotal.toFixed(2).replace(".", ",")}</p>
+              ) : (
+                <p>0,00</p>
+              )}
             </div>
             <Link
               href="/coffeeDeliverySuccess"
