@@ -3,6 +3,7 @@ import Link from "next/link";
 import Cart from "./Cart";
 
 export default function Header() {
+  const { totalItems } = useContext(ItensContext);
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center justify-between h-[104px] px-6   py-4 z-50  mx-auto bg-white">
       <div className=" max-w-[1240px] mx-auto flex justify-between w-full  md:px-10">
