@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Cart from "./Cart";
+import { useContext } from "react";
+import { ItensContext } from "../../context/ItensContext";
 
 export default function Header() {
   const { totalItems } = useContext(ItensContext);
