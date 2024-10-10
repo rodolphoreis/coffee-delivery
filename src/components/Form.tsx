@@ -125,7 +125,7 @@ const Form = () => {
               type="number"
               placeholder="Número"
               {...register("numero")}
-              className="rounded-[4px] w-40 p-2 placeholder:text-sm"
+              className="rounded-[4px] w-32 p-2 placeholder:text-sm"
             />
 
             <input
@@ -141,7 +141,7 @@ const Form = () => {
               type="text"
               placeholder="Freguesia"
               {...register("freguesia")}
-              className="rounded-[4px] p-2 w-40 placeholder:text-sm"
+              className="rounded-[4px] p-2 w-32 placeholder:text-sm"
             />
 
             <input
