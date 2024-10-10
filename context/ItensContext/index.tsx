@@ -28,6 +28,16 @@ export default function ItensContextProvider({
   const [itemQuantities, setItemQuantities] = useState<{
     [key: number]: number;
   }>({});
+  const [activeButton, setActiveButton] = useState("");
+  const [address, setAddress] = useState<AddressesInterface>({
+    codigoPostal: "",
+    rua: "",
+    numero: "",
+    complemento: "",
+    freguesia: "",
+    cidade: "",
+    metodoPagamento: "",
+  });
 
   const totalItems = Object.values(itemQuantities || {}).reduce(
     (acc, quantity) => acc + quantity,
