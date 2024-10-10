@@ -17,3 +17,13 @@ export interface ItemsInterface {
   type: CategoryTypes[];
   image: string;
 }
+
+export interface AddressesInterface {
+  codigoPostal: string;
+  rua: string;
+  numero: string;
+  complemento: string;
+  freguesia: string;
+  cidade: string;
+  metodoPagamento: string;
+}
