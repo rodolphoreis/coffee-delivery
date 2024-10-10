@@ -2,6 +2,7 @@
 import { ProductListType } from "@/components/ProductList";
 import { products } from "@/db/products";
 import { createContext, ReactNode, useEffect, useState } from "react";
+import { AddressesInterface } from "../../type";
 
 interface ItensContextProviderProps {
   children: ReactNode;
