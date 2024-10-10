@@ -25,7 +25,7 @@ export default function CartItemCounter({ id }: { id: number }) {
     <div className="flex items-center gap-2 bg-base-hover px-4 py-2 rounded-xl">
       <button
         type="button"
-        className="bg-base-hover text-xl font-medium text-purple-700"
+        className="bg-base-hover text-base sm:text-xl font-medium text-purple-700"
         onClick={handleDecrement}
       >
         -
@@ -33,7 +33,7 @@ export default function CartItemCounter({ id }: { id: number }) {
       <span className="ml-2 bg-base-hover">{itemQuantities[id] || 0}</span>
       <button
         type="button"
-        className="bg-base-hover text-xl text-purple-700 font-medium"
+        className="bg-base-hover text-base sm:text-xl text-purple-700 font-medium"
         onClick={handleIncrement}
       >
         +
