@@ -69,6 +69,10 @@ export default function ItensContextProvider({
         products: products,
         itemQuantities,
         totalItems,
+        activeButton,
+        address,
+        setAddress,
+        setActiveButton,
         removeItem,
         setItemQuantities,
       }}
