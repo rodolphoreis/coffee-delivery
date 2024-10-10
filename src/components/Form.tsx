@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -5,10 +6,10 @@ import * as zod from "zod";
 import Image from "next/image";
 
 import { Baloo_2 } from "next/font/google";
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { CoffeeCard } from "./CoffeeCard";
-import Link from "next/link";
 import { ItensContext } from "../../context/ItensContext";
+import { useRouter } from "next/navigation";
 
 const baloo2 = Baloo_2({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ const Inputs = zod.object({
   complemento: zod.string(),
   freguesia: zod.string().min(1, "Este campo é obrigatório"),
   cidade: zod.string().min(1, "Este campo é obrigatório"),
+  metodoPagamento: zod.string(),
 });
 
 type Inputs = zod.infer<typeof Inputs>;
@@ -44,7 +46,6 @@ const Form = () => {
   const { register, handleSubmit } = useForm<Inputs>({
     resolver: zodResolver(Inputs),
   });
-  const [activeButton, setActiveButton] = useState("");
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const updatedData = { ...data, metodoPagamento: activeButton };
@@ -228,8 +229,7 @@ const Form = () => {
               {...register("metodoPagamento")}
             />
           </div>
-        </form>
-      </div>
+        </div>
 
         <div>
           <div className="flex flex-col flex-1 h-full p-4 sm:mx-0 sm:p-10 rounded-xl bg-base-card  justify-between  xl:min-w-[550px]">
@@ -239,43 +239,44 @@ const Form = () => {
               >
                 Complete seu pedido
               </h1>
-            {selectedItems.map((item) => (
-              <CoffeeCard key={item.id} id={item.id} />
-            ))}
-          </div>
-          <div className="flex flex-col gap-3">
-            <div className="flex justify-between">
-              <h1>Total de itens</h1>
+              {selectedItems.map((item) => (
+                <CoffeeCard key={item.id} id={item.id} />
+              ))}
+            </div>
+            <div className="flex flex-col gap-3">
+              <div className="flex justify-between">
+                <h1>Total de itens</h1>
 
-              <p>{totalPrice.toFixed(2).replace(".", ",")}</p>
+                <p>{totalPrice.toFixed(2).replace(".", ",")}</p>
+              </div>
+              <div className="flex justify-between">
+                <h1>Entrega</h1>
+                {selectedItems.length > 0 ? (
+                  <p>{delivery.toFixed(2).replace(".", ",")}</p>
+                ) : (
+                  <p>{ThereAreNoProductsSelected}</p>
+                )}
+              </div>
+              <div className="flex justify-between font-bold">
+                <h1>Total</h1>
+                {selectedItems.length > 0 ? (
+                  <p>{grandTotal.toFixed(2).replace(".", ",")}</p>
+                ) : (
+                  <p>0,00</p>
+                )}
+              </div>
+              <button
+                type="submit"
+                className={`w-full rounded-[6px] p-4 text-white text-center text-[14px] sm:text-base font-bold mt-6 ${
+                  activeButton === "" ? "bg-yellow" : "bg-purple-500"
+                }`}
+              >
+                CONFIRMAR PEDIDO
+              </button>
             </div>
-            <div className="flex justify-between">
-              <h1>Entrega</h1>
-              {selectedItems.length > 0 ? (
-                <p>{delivery.toFixed(2).replace(".", ",")}</p>
-              ) : (
-                <p>{ThereAreNoProductsSelected}</p>
-              )}
-            </div>
-            <div className="flex justify-between font-bold">
-              <h1>Total</h1>
-              {selectedItems.length > 0 ? (
-                <p>{grandTotal.toFixed(2).replace(".", ",")}</p>
-              ) : (
-                <p>0,00</p>
-              )}
-            </div>
-            <Link
-              href="/coffeeDeliverySuccess"
-              className={`w-full rounded-[6px] p-4 text-white text-center text-base font-bold mt-6 ${
-                activeButton === "" ? "bg-yellow" : "bg-purple-500"
-              }`}
-            >
-              CONFIRMAR PEDIDO
-            </Link>
           </div>
         </div>
-      </div>
+      </form>
     </main>
   );
 };
