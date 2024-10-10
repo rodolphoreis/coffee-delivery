@@ -231,14 +231,14 @@ const Form = () => {
         </form>
       </div>
 
-      <div>
-        <h1
-          className={`${baloo2.className} text-base mb-2 mt-2  xl:text-2xl xl:mb-8 font-bold leading-9`}
-        >
-          Complete seu pedido
-        </h1>
-        <div className="flex flex-col flex-1 p-4 sm:mx-0 sm:p-10 rounded-xl bg-base-card  justify-between  xl:min-w-[550px]">
-          <div>
+        <div>
+          <div className="flex flex-col flex-1 h-full p-4 sm:mx-0 sm:p-10 rounded-xl bg-base-card  justify-between  xl:min-w-[550px]">
+            <div>
+              <h1
+                className={`${baloo2.className} text-base mb-2 mt-2  xl:text-2xl xl:mb-8 font-bold leading-9`}
+              >
+                Complete seu pedido
+              </h1>
             {selectedItems.map((item) => (
               <CoffeeCard key={item.id} id={item.id} />
             ))}
