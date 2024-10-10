@@ -39,7 +39,7 @@ export const products: ProductListType[] = [
     description: "Meio a meio de expresso tradicional com leite vaporizado",
     price: "€ 5,90",
     type: ["Tradicional", "com leite"],
-    image: "/Cafe-com-leite.png",
+    image: "/Cafe-com-Leite.png",
   },
   {
     id: 6,
