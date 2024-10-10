@@ -22,7 +22,7 @@ export default function CartItemCounter({ id }: { id: number }) {
   };
 
   return (
-    <div className="flex items-center gap-2 bg-base-hover px-4 py-2 rounded-xl">
+    <div className="flex items-center gap-2 bg-base-hover px-2 py-1 sm:px-4 sm:py-2 rounded-xl">
       <button
         type="button"
         className="bg-base-hover text-base sm:text-xl font-medium text-purple-700"
@@ -30,7 +30,7 @@ export default function CartItemCounter({ id }: { id: number }) {
       >
         -
       </button>
-      <span className="ml-2 bg-base-hover">{itemQuantities[id] || 0}</span>
+      <span className="ml-1 bg-base-hover">{itemQuantities[id] || 0}</span>
       <button
         type="button"
         className="bg-base-hover text-base sm:text-xl text-purple-700 font-medium"
