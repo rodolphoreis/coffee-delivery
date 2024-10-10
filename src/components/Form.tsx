@@ -222,6 +222,11 @@ const Form = () => {
                 DINHEIRO
               </button>
             </div>
+            <input
+              type="hidden"
+              value={activeButton}
+              {...register("metodoPagamento")}
+            />
           </div>
         </form>
       </div>
