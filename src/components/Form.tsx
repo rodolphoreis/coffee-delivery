@@ -79,16 +79,16 @@ const Form = () => {
 
   return (
     <main className="mx-2 sm:mx-0 flex flex-col  gap-6 sm:gap-16 xl:flex-row">
-      <div>
-        <h1
-          className={`${baloo2.className} text-base mb-2 mt-2  xl:text-2xl xl:mb-8 font-extrabold leading-9`}
-        >
-          Complete seu pedido
-        </h1>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col p-4 sm:mx-0 sm:p-10 rounded-xl bg-base-card"
-        >
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col sm:flex-row gap-5 p-4 sm:mx-0 sm:p-10"
+      >
+        <div className="flex flex-col p-4 sm:mx-0 sm:p-10 rounded-xl bg-base-card">
+          <h1
+            className={`${baloo2.className} text-base mb-2 mt-2  xl:text-2xl xl:mb-8 font-extrabold leading-9`}
+          >
+            Complete seu pedido
+          </h1>
           <div className="flex gap-2 mb-8 ">
             <Image
               src="/locationFormIcon.svg"
