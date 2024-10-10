@@ -10,7 +10,7 @@ export default function Checkout() {
           <Header />
         </header>
         <main className="flex-1">
-          <section className="mt-44">
+          <section className="mt-[92px] sm:mt-44">
             <Form />
           </section>
         </main>
