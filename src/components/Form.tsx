@@ -170,12 +170,12 @@ const Form = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 items-center">
               <button
                 type="button"
-                onClick={() => handleButtonClick("credito")}
-                className={`flex gap-2 p-2 sm:p-4 rounded-[6px] ${
-                  activeButton === "credito" ? "border-2 border-purple-500" : ""
+                onClick={() => handleButtonClick("Credito")}
+                className={`flex text-[12px] sm:text-base items-center gap-2 p-2 sm:p-4 rounded-[6px] ${
+                  activeButton === "Credito" ? "border-2 border-purple-500" : ""
                 }`}
               >
                 <Image
@@ -183,15 +183,15 @@ const Form = () => {
                   alt="Cartão"
                   width={22}
                   height={22}
-                  className="self-start"
+                  className="self-start items-center"
                 />
                 CRÉDITO
               </button>
               <button
                 type="button"
-                onClick={() => handleButtonClick("paypal")}
-                className={`flex gap-2 p-2 sm:p-4 rounded-[6px] ${
-                  activeButton === "paypal" ? "border-2 border-purple-500" : ""
+                onClick={() => handleButtonClick("Paypal")}
+                className={`flex text-[12px] sm:text-base items-center gap-2 p-2 sm:p-4 rounded-[6px] ${
+                  activeButton === "Paypal" ? "border-2 border-purple-500" : ""
                 }`}
               >
                 <Image
@@ -205,9 +205,9 @@ const Form = () => {
               </button>
               <button
                 type="button"
-                onClick={() => handleButtonClick("dinheiro")}
-                className={`flex gap-2 p-2 sm:p-4 rounded-[6px] ${
-                  activeButton === "dinheiro"
+                onClick={() => handleButtonClick("Dinheiro")}
+                className={`flex text-[12px] sm:text-base items-center gap-2 p-2 sm:p-4 rounded-[6px] ${
+                  activeButton === "Dinheiro"
                     ? "border-2 border-purple-500"
                     : ""
                 }`}
