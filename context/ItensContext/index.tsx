@@ -11,6 +11,10 @@ export interface ContextItens {
   products: ProductListType[];
   totalItems: number;
   itemQuantities: { [key: number]: number };
+  activeButton: string;
+  address: AddressesInterface;
+  setAddress: (address: AddressesInterface) => void;
+  setActiveButton: (buttonName: string) => void;
   setItemQuantities: (quantities: { [key: number]: number }) => void;
   removeItem: (id: number) => void;
 }
