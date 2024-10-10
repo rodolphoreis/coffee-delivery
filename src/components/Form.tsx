@@ -133,7 +133,7 @@ const Form = () => {
               type="text"
               placeholder="Complemento (Opcional)"
               {...register("complemento")}
-              className="flex flex-1 rounded-[4px] p-2 placeholder:text-sm"
+              className="flex flex-1 w-24 sm:w-full rounded-[4px] p-2 placeholder:text-sm"
             />
           </div>
 
@@ -149,7 +149,7 @@ const Form = () => {
               type="text"
               placeholder="Cidade"
               {...register("cidade")}
-              className="rounded-[4px] p-2 flex-1"
+              className="rounded-[4px] p-2 flex-1 w-24 sm:w-full"
             />
           </div>
           <div>
