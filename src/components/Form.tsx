@@ -46,7 +46,16 @@ const Form = () => {
   });
   const [activeButton, setActiveButton] = useState("");
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const updatedData = { ...data, metodoPagamento: activeButton };
+
+    setAddress(updatedData);
+    localStorage.setItem("deliveryData", JSON.stringify(updatedData));
+
+    setTimeout(() => {
+      router.push("/coffeeDeliverySuccess");
+    }, 100);
+  };
 
   const handleButtonClick = (buttonName: string) => {
     setActiveButton(buttonName);
